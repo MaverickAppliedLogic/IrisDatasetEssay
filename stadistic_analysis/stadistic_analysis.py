@@ -1,9 +1,7 @@
 import pandas as pd
-from matplotlib.pyplot import title
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.utils import Bunch
-import numpy as np
 
 
 def stadistic_analysis(data: Bunch):
