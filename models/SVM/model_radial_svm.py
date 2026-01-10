@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, GridSearchCV
 
-class RadialSVM:
+class ModelRadialSVM:
 
     iris: Bunch
     x = None
@@ -39,7 +39,7 @@ class RadialSVM:
         self.modelo = grid.best_estimator_
         
 
-    def model_stats(self, graph: bool):
+    def exec(self, show_graph: bool):
         
         pred = self.modelo.predict(self.X_test)
         accuracy = accuracy_score(
@@ -58,7 +58,7 @@ class RadialSVM:
         print("Matriz de confusion ")
         print()
         print(confusion_matrix)
-        if graph:
+        if show_graph:
             self.show()
 
 
